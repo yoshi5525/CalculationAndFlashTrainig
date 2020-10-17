@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewMainCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/calc_select"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupCalcOperator"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMainCalc">
+
+        <RadioButton
+            android:id="@+id/radioButtonCalcPlus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="足し算"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCalcMinus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="引き算"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCalcMultiplied"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="掛け算"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCalcAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="すべて"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupCalcDigit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroupCalcOperator"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMainCalc">
+
+        <RadioButton
+            android:id="@+id/radioButtonCalcDigit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="1桁"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCalcDigit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2桁"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCalcDigit3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3桁"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCalcDigit4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4桁"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonCalculationGame"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/calcStart"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCalcOperator" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="@string/flash_select"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculationGame" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupFlashTime"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/radioButtonFlashTime1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="1秒間"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFlashTime2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2秒間"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFlashTime3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3秒間"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupFlashDigit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroupFlashTime"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/radioButtonFlashDigit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="5桁"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFlashDigit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8桁"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFlashDigit3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10桁"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonFlashGame"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/flashStart"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupFlashTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

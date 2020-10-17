@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">計算･フラッシュゲームで脳トレ</string>
+    
+    <string name="calc_select">計算式と桁数をお選び下さい</string>
+    <string name="flash_select">表示時間と表示桁数をお選び下さい</string>
+    <string name="calcStart">計算脳トレ開始</string>
+    <string name="flashStart">数当てゲーム開始</string>
+
+    <string name="intent_key_oprator">intent_key_oprator</string>
+    <string name="intent_key_digit">intent_key_digit</string>
+    <string name="intent_key_digit_flash">intent_key_digit_flash</string>
+    <string name="intent_key_time">intent_key_time</string>
+
+    <string name="operator">計算式</string>
+    <string name="digit_number">桁数</string>
+    <string name="question_remaining">残り問題数</string>
+    <string name="correct_answers">正解数</string>
+    <string name="answer_time">回答時間</string>
+    <string name="show_time">表示時間</string>
+    <string name="fitting_together">こたえ合わせ</string>
+    <string name="game_on">ゲーム開始</string>
+    <string name="game_end">ゲーム終了(前の画面に戻る)</string>
+
+    <string name="strSeconds">秒</string>
+    <string name="strDigit">桁</string>
+    <string name="strQuestion">問</string>
+    <string name="strMessage"> 文字でお答え下さい</string>
+</resources>
