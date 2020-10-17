@@ -136,6 +136,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewInfo" />
 
+    <TextView
+        android:id="@+id/textViewFlashRealAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:textColor="@color/colorAnswer"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout4" />
+
     <TableLayout
         android:id="@+id/tableLayout5"
         android:layout_width="0dp"
@@ -308,8 +321,8 @@
         android:id="@+id/imageViewFlash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewFlashQuestion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFlashQuestion" />
+        app:layout_constraintTop_toTopOf="@id/textViewFlashQuestion" />
 </androidx.constraintlayout.widget.ConstraintLayout>

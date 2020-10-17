@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_calculation.*
 import kotlinx.android.synthetic.main.activity_calculation.buttonCalc0
+import kotlinx.android.synthetic.main.activity_flashgame.*
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -57,6 +58,7 @@ class CalculationActivity : AppCompatActivity(), View.OnClickListener {
         buttonCalcMinus.isEnabled = false
         buttonCalcClear.isEnabled = false
         buttonCalcAnswerCheck.visibility = View.INVISIBLE
+        textViewCalcRealAnswer.visibility = View.INVISIBLE
 
         buttonCalc0.setOnClickListener(this)
         buttonCalc1.setOnClickListener(this)
@@ -137,6 +139,7 @@ class CalculationActivity : AppCompatActivity(), View.OnClickListener {
         buttonCalcClear.isEnabled = true
         buttonCalcAnswerCheck.isEnabled = true
         textViewCalcAnswer.text = ""
+        textViewCalcRealAnswer.visibility = View.INVISIBLE
         imageViewCalc.visibility = View.INVISIBLE
 
         val rnd = Random()
@@ -156,11 +159,11 @@ class CalculationActivity : AppCompatActivity(), View.OnClickListener {
         when (calcOprator) {
             "+" -> textViewCalcOprator.text = calcOprator
             "-" -> textViewCalcOprator.text = calcOprator
-            "*" -> textViewCalcOprator.text = calcOprator
-            "+ - *" -> when (rnd.nextInt(3) + 1) {
+            "×" -> textViewCalcOprator.text = calcOprator
+            "+ - ×" -> when (rnd.nextInt(3) + 1) {
                             1 -> textViewCalcOprator.text = "+"
                             2 -> textViewCalcOprator.text = "-"
-                            3 -> textViewCalcOprator.text = "*"
+                            3 -> textViewCalcOprator.text = "×"
                         }
         }
         calcRemainingNumber--
@@ -200,6 +203,9 @@ class CalculationActivity : AppCompatActivity(), View.OnClickListener {
         } else {
             imageViewCalc.setImageResource(R.drawable.incorrect)
         }
+
+        textViewCalcRealAnswer.visibility = View.VISIBLE
+        textViewCalcRealAnswer.text = calcAnswerTruth.toString()
 
         if (calcRemainingNumber == 0) {
             handler.removeCallbacks(runnable) // タイマーストップ

@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
             when (radioGroupCalcOperator.checkedRadioButtonId) {
                 R.id.radioButtonCalcPlus -> intent.putExtra(getString(R.string.intent_key_oprator), "+")
                 R.id.radioButtonCalcMinus -> intent.putExtra(getString(R.string.intent_key_oprator), "-")
-                R.id.radioButtonCalcMultiplied -> intent.putExtra(getString(R.string.intent_key_oprator), "*")
-                R.id.radioButtonCalcAll -> intent.putExtra(getString(R.string.intent_key_oprator), "+ - *")
+                R.id.radioButtonCalcMultiplied -> intent.putExtra(getString(R.string.intent_key_oprator), "×")
+                R.id.radioButtonCalcAll -> intent.putExtra(getString(R.string.intent_key_oprator), "+ - ×")
             }
             when (radioGroupCalcDigit.checkedRadioButtonId) {
                 R.id.radioButtonCalcDigit1 -> intent.putExtra(getString(R.string.intent_key_digit), 1)

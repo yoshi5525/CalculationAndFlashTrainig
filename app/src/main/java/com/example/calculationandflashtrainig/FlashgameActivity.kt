@@ -44,6 +44,7 @@ class FlashgameActivity : AppCompatActivity(), View.OnClickListener {
         buttonFlashBack.isEnabled = false
         buttonFlashAnswerCheck.visibility = View.INVISIBLE
         textViewFlashAnswer.visibility = View.INVISIBLE
+        textViewFlashRealAnswer.visibility = View.INVISIBLE
 
         buttonFlash0.setOnClickListener(this)
         buttonFlash1.setOnClickListener(this)
@@ -97,6 +98,7 @@ class FlashgameActivity : AppCompatActivity(), View.OnClickListener {
     private fun flashQuestion() {
         textViewFlashAnswer.text = ""
         textViewFlashAnswer.visibility = View.INVISIBLE
+        textViewFlashRealAnswer.visibility = View.INVISIBLE
         imageViewFlash.visibility = View.INVISIBLE
 
         val rnd = Random()
@@ -149,6 +151,7 @@ class FlashgameActivity : AppCompatActivity(), View.OnClickListener {
         buttonFlashBack.isEnabled = false
         buttonFlashAnswerCheck.isEnabled = false
         imageViewFlash.visibility = View.VISIBLE
+        textViewFlashRealAnswer.visibility = View.VISIBLE
 
         val flashAnswer: Long = textViewFlashAnswer.text.toString().toLong()
         if (flashQuestionNumber == flashAnswer) {
@@ -158,6 +161,7 @@ class FlashgameActivity : AppCompatActivity(), View.OnClickListener {
         } else {
             imageViewFlash.setImageResource(R.drawable.incorrect)
         }
+        textViewFlashRealAnswer.text = flashQuestionNumber.toString()
 
         if (flashRemainingNumber == 0) {
             buttonFlashEnd.isEnabled = true
