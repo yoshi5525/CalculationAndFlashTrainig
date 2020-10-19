@@ -101,11 +101,10 @@ class FlashgameActivity : AppCompatActivity(), View.OnClickListener {
         textViewFlashRealAnswer.visibility = View.INVISIBLE
         imageViewFlash.visibility = View.INVISIBLE
 
-        val rnd = Random()
         when (flashDigit) {
-            5 -> flashQuestionNumber = (rnd.nextInt(90000)  + 10000).toLong()
-            8 -> flashQuestionNumber = (rnd.nextInt(90000000) + 10000000).toLong()
-            10 -> flashQuestionNumber = (rnd.nextInt(9000000000.toInt()) + 1000000000).toLong()
+            5 -> flashQuestionNumber = (kotlin.random.Random.nextInt(0, 90000)  + 10000).toLong()
+            8 -> flashQuestionNumber = (kotlin.random.Random.nextInt(0, 90000000) + 10000000).toLong()
+            10 -> flashQuestionNumber = (kotlin.random.Random.nextInt(0, 9000000000.toInt()) + 1000000000).toLong()
         }
 
         val longFlashTime: Long = (flashTime * 1000).toLong()

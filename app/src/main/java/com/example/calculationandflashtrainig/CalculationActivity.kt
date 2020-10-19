@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_calculation.buttonCalc0
 import kotlinx.android.synthetic.main.activity_flashgame.*
 import java.util.*
 import kotlin.concurrent.schedule
+import kotlin.random.Random
 
 class CalculationActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -142,25 +143,24 @@ class CalculationActivity : AppCompatActivity(), View.OnClickListener {
         textViewCalcRealAnswer.visibility = View.INVISIBLE
         imageViewCalc.visibility = View.INVISIBLE
 
-        val rnd = Random()
         when (calcDigit) {
-            1 -> textViewCalcLeft.text = rnd.nextInt(10).toString()
-            2 -> textViewCalcLeft.text = (rnd.nextInt(90) + 10).toString()
-            3 -> textViewCalcLeft.text = (rnd.nextInt(900) + 100).toString()
-            4 -> textViewCalcLeft.text = (rnd.nextInt(9000) + 1000).toString()
+            1 -> textViewCalcLeft.text = (kotlin.random.Random.nextInt(0, 9) + 1).toString()
+            2 -> textViewCalcLeft.text = (kotlin.random.Random.nextInt(0, 90) + 10).toString()
+            3 -> textViewCalcLeft.text = (kotlin.random.Random.nextInt(0, 900) + 100).toString()
+            4 -> textViewCalcLeft.text = (kotlin.random.Random.nextInt(0, 9000) + 1000).toString()
         }
         when (calcDigit) {
-            1 -> textViewCalcRight.text = rnd.nextInt(10).toString()
-            2 -> textViewCalcRight.text = (rnd.nextInt(90) + 10).toString()
-            3 -> textViewCalcRight.text = (rnd.nextInt(900) + 100).toString()
-            4 -> textViewCalcRight.text = (rnd.nextInt(9000) + 1000).toString()
+            1 -> textViewCalcRight.text = (kotlin.random.Random.nextInt(0, 9) + 1).toString()
+            2 -> textViewCalcRight.text = (kotlin.random.Random.nextInt(0, 90) + 10).toString()
+            3 -> textViewCalcRight.text = (kotlin.random.Random.nextInt(0, 900) + 100).toString()
+            4 -> textViewCalcRight.text = (kotlin.random.Random.nextInt(0, 9000) + 1000).toString()
         }
 
         when (calcOprator) {
             "+" -> textViewCalcOprator.text = calcOprator
             "-" -> textViewCalcOprator.text = calcOprator
             "×" -> textViewCalcOprator.text = calcOprator
-            "+ - ×" -> when (rnd.nextInt(3) + 1) {
+            "+ - ×" -> when (Random.nextInt(0, 3) + 1) {
                             1 -> textViewCalcOprator.text = "+"
                             2 -> textViewCalcOprator.text = "-"
                             3 -> textViewCalcOprator.text = "×"
